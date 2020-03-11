@@ -33,16 +33,28 @@ Follow the [How to migrate a validator to a new machine](/docs/validators-and-fu
   ```bash
   # Stop the node
   sudo systemctl stop enigma-node
+  ```
 
   # Clean the data folder
+  ```bash
   enigmad unsafe-reset-all
+  ```
 
   # Download & install v0.0.2
+  ```bash
   wget https://github.com/enigmampc/EnigmaBlockchain/releases/download/v0.0.2/enigmachain_0.0.2_amd64.deb
+  ```
+  
+  ```bash
   sudo dpkg -i enigmachain_0.0.2_amd64.deb
+  ```
+  
+  ```bash
   sudo systemctl enable enigma-node
+  ```
 
   # Start the full node
+  ```bash
   sudo systemctl start enigma-node
   ```
 
